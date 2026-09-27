@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+@layer base {
+  html,
+  body,
+  #root {
+    margin: 0;
+    min-height: 100%;
+  }
+
+  body {
+    background: #fff;
+    color: #000;
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-black text-white px-6 py-3 rounded-lg font-semibold
+           hover:bg-gray-800 transition-colors duration-200
+           focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2;
+  }
+
+  .btn-secondary {
+    @apply border border-black text-black px-6 py-3 rounded-lg font-medium
+           hover:bg-gray-100 transition-colors duration-200
+           focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2;
+  }
+
+  .dropzone-active {
+    @apply border-black bg-gray-50;
+  }
+
+  .dropzone-inactive {
+    @apply border-gray-300 hover:border-gray-400;
+  }
+
+  .instrument-item {
+    @apply flex items-center gap-4 p-4 border-b border-gray-200
+           hover:bg-gray-50 transition-colors;
+  }
+
+  .select-custom {
+    @apply border border-gray-300 rounded px-3 py-2 bg-white
+           focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent
+           hover:border-gray-400 transition-colors;
+  }
+
+  .spinner {
+    @apply animate-spin rounded-full h-6 w-6 border-2 border-gray-300 border-t-black;
+  }
+
+  .container-custom {
+    @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+}
