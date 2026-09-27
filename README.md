@@ -50,3 +50,4 @@ Neue Features gehören meist in `src/utils/` (Logik) oder `src/components/` (UI)
 - Sehr komplexe MuseScore-Dateien (viele Spezialnotationen) können unvollständig konvertiert werden. In dem Fall in MuseScore als MusicXML exportieren und diese Datei hochladen.
 - Percussion ohne Tonhöhe wird übersprungen.
 - OpenSheetMusicDisplay macht das Bundle groß (~2 MB). Das ist beim ersten Laden normal.
+
